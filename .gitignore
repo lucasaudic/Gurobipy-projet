@@ -1,0 +1,28 @@
+# Basics
+__pycache__/
+*.py[cod]
+*$py.class
+.DS_Store
+
+# Virtual Environment
+venv/
+.env
+
+# Data and Output
+data/
+*.in
+*.out
+*.mps
+*.log
+
+# Unrelated files (clean up)
+notebook.ipynb
+easy.py
+exe2.py
+correct-output.txt
+output.txt
+M1 OC CC1 2025 Corg.pdf
+lot_sizing_data.json
+portfolio-example.json
+mkp.mps.bz2
+hashcode_2017_qualification_round.pdf
