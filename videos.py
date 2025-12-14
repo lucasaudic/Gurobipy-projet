@@ -78,7 +78,10 @@ def solve(input_file):
             else:
                 marginal_gain = values[i]
             
-            if marginal_gain <= 0:
+            # The array `values` is non-increasing because `valid_caches` is sorted by latency ascending.
+            # Thus, marginal_gain is guaranteed to be >= 0.
+            # We skip creating variables for 0 marginal gain purely as an optimization to reduce model size.
+            if marginal_gain == 0:
                 continue
                 
             z = m.addVar(vtype=GRB.BINARY, obj=marginal_gain * n, name=f"z_{v}_{e}_{i}")
