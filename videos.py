@@ -77,10 +77,6 @@ def solve(input_file):
                 marginal_gain = values[i] - values[i+1]
             else:
                 marginal_gain = values[i]
-            
-            # The array `values` is non-increasing because `valid_caches` is sorted by latency ascending.
-            # Thus, marginal_gain is guaranteed to be >= 0.
-            # We skip creating variables for 0 marginal gain purely as an optimization to reduce model size.
             if marginal_gain == 0:
                 continue
                 
